@@ -1,14 +1,48 @@
 /* styles.css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Athelas", serif;
   background-color: #f0f0f0;
   color: #333;
   margin: 20px;
 }
 
+hr {
+  border: 1px solid #000; /* Sets the border color, width, and style */
+  margin-bottom: 2%;
+  padding: 0;
+}
+
+.header-container {
+  margin: 0;
+}
 .resume-header {
   justify-content: center;
-  margin-bottom: 20px;
   display: flex;
+}
+
+.subsection-header {
+  font-size: 22px;
+  margin: 0;
+}
+
+.entry-name {
+  margin-left: 2%;
+  font-weight: bold;
+}
+
+.entry-skills {
+  font-style: italic;
+}
+.entry-header {
+  display: flex;
+}
+
+.entry-date {
+  /*  position on the right side of the screen */
+  margin-left: auto;
+}
+
+.entry-description {
+  margin-left: 2%;
 }
