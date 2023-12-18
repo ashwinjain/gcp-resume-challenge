@@ -26,16 +26,13 @@ hr {
   margin: 0;
 }
 
+.entry-header {
+  display: flex;
+}
+
 .entry-name {
   margin-left: 2%;
   font-weight: bold;
-}
-
-.entry-skills {
-  font-style: italic;
-}
-.entry-header {
-  display: flex;
 }
 
 .entry-date {
@@ -43,6 +40,33 @@ hr {
   margin-left: auto;
 }
 
+.entry-header-description {
+  display: flex;
+}
+.left {
+  margin-left: 2%;
+  font-style: italic;
+}
+.right {
+  margin-left: auto;
+  font-style: italic;
+}
+.entry-skills {
+  font-style: italic;
+}
+
 .entry-description {
   margin-left: 2%;
+}
+
+.setting {
+  display: flex;
+}
+
+.setting-time {
+  margin-left: auto;
+}
+
+.entry-skill {
+  display: flex;
 }
