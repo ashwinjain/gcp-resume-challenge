@@ -1,5 +1,3 @@
-// import Entry from "./Entry.js";
-
 function renderHeader() {
   // Create the main container div
   var headerContainer = document.createElement("div");
@@ -327,6 +325,27 @@ function renderSetting() {
   // Append the main container div to the body
   document.body.appendChild(settingContainer);
 }
+
+// Function to increase the visitor count
+function increaseVisitorCount() {
+  // Retrieve the current count from localStorage
+  let count = localStorage.getItem("visitorCount");
+
+  // If count is null, set it to 0
+  if (count === null) {
+    count = 0;
+  }
+
+  // Increment the count
+  count++;
+
+  // Update the localStorage and display the count
+  localStorage.setItem("visitorCount", count);
+  document.getElementById("visitorCount").innerText = count;
+}
+
+// Call the function when the page loads
+// increaseVisitorCount();
 var descriptionsMA = [
   "Designed and implemented a highly efficient memory allocator in C utilizing linked lists that performed with 94% efficiency relative to the standard C library memory allocator",
   "Conducted comprehensive memory profiling and analysis using tools like Valgrind to identify and resolve memory leaks and inefficiencies",
