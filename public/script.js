@@ -248,7 +248,13 @@ function renderTechnicalSkill(skillName, skills) {
     }
   }
 
-  entrySkills.innerHTML = skillString;
+  if (skillString == "&nbspGoogle Data Analytics") {
+    // hyperlink it
+    entrySkills.innerHTML =
+      '<a href="https://coursera.org/share/fda2615e8fb864c0a59fdae49bd2c12b">&nbspGoogle Data Analytics</a>';
+  } else {
+    entrySkills.innerHTML = skillString;
+  }
   // entrySkills.textContent = role;
   skillEntry.appendChild(entryName);
   skillEntry.appendChild(entrySkills);
@@ -302,8 +308,18 @@ function renderEducationSubsection(
   entryHeaderDescription.appendChild(leftText);
   entryHeaderDescription.appendChild(rightText);
 
+  const entryGPA = document.createElement("div");
+  entryGPA.classList.add("entry-header-description");
+
+  const gpa = document.createElement("div");
+  gpa.style.marginLeft = "auto";
+  gpa.textContent = "GPA: 3.63";
+
+  entryGPA.appendChild(gpa);
+
   subsectionEntry.appendChild(entryHeader);
   subsectionEntry.appendChild(entryHeaderDescription);
+  subsectionEntry.appendChild(entryGPA);
   // Append the main container to the document body
   document.body.appendChild(subsectionEntry);
 }
@@ -353,20 +369,15 @@ var descriptionsMA = [
 
 var descriptionsFS = [
   "Developed a file sharing system in C that allowed users to share files with other users on local and remote machines",
-  "Implemeneted TCP sockets to establish reliable connections between clients and servers and allow for file transfer",
-  "Tested for support of 100 client, file transfer of files of all sizes, and file transfer of multiple files at once",
+  "Utilized TCP protocal to establish two-way sockets which support reliable file transfer between clients and servers",
+  "Tested for support of up to 100 clients, file transfers of up to 8 GBs, and file transfer of multiple files at once",
 ];
 
 var descriptionsTBP = [
-  "Used Dijkstra’s shortest path algorithm to determine the shortest path from Champaign to Chicago that passes through the most number of Taco Bells",
+  "Used Dijkstra's shortest path algorithm to determine the shortest path from Champaign to Chicago that passes through the most number of Taco Bells",
   "Web scraped to generate a csv file containing every Taco Bell in Illinois and its coordinate location",
   "Wrote test scripts to test our implementation of Dijkstra’s algorithm and our graph data structure",
   "Utilized Git version control to collaborate with 3 other team members",
-];
-var descriptionsGA = [
-  "Leading and mentoring a team of 4 developers in the design and development of an app that tracks machine/equipment availability at the UIUC gym using React, Node.js, Java, and other smaller frameworks",
-  "Fostered a collaborative and innovative work environment by encouraging knowledge sharing, cross-functional communication, and continuous learning",
-  "Stayed updated with new advancements to technologies used in the product to provide strategic direction and ensure the team's skill set remained current",
 ];
 
 var descriptionsBP = [
@@ -415,14 +426,6 @@ renderProjectSubsection(
   "November",
   2022,
   descriptionsTBP
-);
-renderProjectSubsection(
-  "UIUC Gym App",
-  ["C", "Linux"],
-  "September",
-  "December",
-  2023,
-  descriptionsGA
 );
 
 renderSection("Experience");
