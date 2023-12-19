@@ -251,7 +251,7 @@ function renderTechnicalSkill(skillName, skills) {
   if (skillString == "&nbspGoogle Data Analytics") {
     // hyperlink it
     entrySkills.innerHTML =
-      '<a href="https://coursera.org/share/fda2615e8fb864c0a59fdae49bd2c12b">&nbspGoogle Data Analytics</a>';
+      '&nbsp<a href="https://coursera.org/share/fda2615e8fb864c0a59fdae49bd2c12b">Google Data Analytics</a>';
   } else {
     entrySkills.innerHTML = skillString;
   }
